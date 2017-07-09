@@ -4,8 +4,8 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
 import registerServiceWorker from "./registerServiceWorker";
-import App from "./pages/App";
-import store from "./pages/store";
+import App from "./page/App";
+import store from "./page/store";
 
 import "./index.css";
 

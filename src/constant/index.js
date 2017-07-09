@@ -6,7 +6,7 @@
 
 import * as _PAGES from "./pages";
 import * as _GLOBAL from "./global";
-import * as _COMPONENTS from "./components";
+import * as _COMPONENTS from "./component";
 
 export default {
   PAGES: _PAGES,

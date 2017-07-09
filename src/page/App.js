@@ -2,8 +2,8 @@ import React from "react";
 
 import Layout from "antd/lib/layout";
 
-import Sider from "../components/Sider/smart";
-import Header from "../components/Header/smart";
+import Sider from "../component/Sider/smart";
+import Header from "../component/Header/smart";
 import "./App.css";
 
 import { connect } from "react-redux";
