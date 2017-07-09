@@ -8,7 +8,7 @@ import dataReducer from '../reducers/data';
 
 /**
  * @description 
- * 组合 state 的根结构 state从某种意义上来讲就是 model 数据集
+ * 组合 state 的根结构 ，state 从某种意义上来讲就是 model 数据集
  * XXX 代表特定模块
  * 
  * 

@@ -11,12 +11,6 @@ import { bindActionCreators } from "redux";
 
 // ================================================
 // 容器
-// 1.引入 redux 解决跨组件 state 交互问题 
-//   譬如：Header 的 Icon 触发 Sider 的展开与闭合效果
-// 2.抽出一个常量模块存放跨组件使用的常量
-// 3.引入 react-route 解决路由问题
-// 4.引入 react-route-redux
-// 5.引入 Sass 或则 Less 或则 Stylus
 // ================================================
 
 const { Content } = Layout;
