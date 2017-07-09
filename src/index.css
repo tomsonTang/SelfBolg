@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* 设置根节点高度占比为窗口占比一致 */
+#root{
+  height: 100%;
+}
+å
+.text-center{
+  text-align: center;
+}
