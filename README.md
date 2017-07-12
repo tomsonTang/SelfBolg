@@ -15,7 +15,7 @@
 - [ ] 引入 Sass 或则 Less 或则 Stylus
 - [ ] 引入 redux-logger 
 - [ ] 引入 redux-thunk
-- [ ] 引入 redux-actions 规范化 action 内容以及减少与 action 交互过程的冗余同时为 action 引入命名空间
+- [x] 引入 redux-actions 规范化 action 内容以及减少与 action 交互过程的冗余同时为 action 引入命名空间
 
 
 
