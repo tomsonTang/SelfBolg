@@ -9,11 +9,14 @@ import "./App.css";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-// ================================================
-// 容器
-// ================================================
-
 const { Content } = Layout;
+
+/**
+ * 容器
+ * 
+ * @class App
+ * @extends {React.Component}
+ */
 
 class App extends React.Component {
   render() {

@@ -39,6 +39,8 @@ import dataReducer from '../reducers/data';
  *        3.渲染 data.TODO
  *        4.添加若干 todo 到 local.TODO，用户确认添加后将 local 的新增数据发送到服务器
  *        5.服务器响应后执行第2步，第3步，清空当前的 local 数据
+ * 
+ * 注意 : reducer 必须是纯函数
  */
 const rootReducer = combineReducers({
   view:viewReducer,

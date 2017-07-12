@@ -1,5 +1,5 @@
 
-import CONSTANT from "../../constant";
+// import CONSTANT from "../../constant";
 
 const xxxInitialState = {
 };
@@ -11,4 +11,4 @@ const dataReducer = (state = xxxInitialState, action) => {
   }
 };
 
-export default cacheReducer;
+export default dataReducer;

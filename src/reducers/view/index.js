@@ -1,4 +1,6 @@
-import * as HeaderAction from "../../components/Header/action";
+import {handleActions, combineActions} from "redux-actions";
+
+import actionCreators from "../../component/Header/action.js";
 import CONSTANT from "../../constant";
 
 const viewInitialState = {
@@ -8,22 +10,24 @@ const viewInitialState = {
   }
 };
 
-const viewReducer = (state = viewInitialState, action) => {
-  switch (action.type) {
-    case HeaderAction.CLOSE_SIDER:
-    case HeaderAction.OPEN_SIDER:
-    case HeaderAction.CHANGE_TO_LONG_LOGO:
-    case HeaderAction.CHANGE_TO_SHORT_LOGO:
+const {openSider, closeSider, changeToShortLogo, changeToLongLogo} = actionCreators;
+
+const viewReducer = handleActions({
+  /**
+   * 将相同处理逻辑的 reducer 做一致处理
+   */
+  [combineActions(openSider, closeSider, changeToShortLogo, changeToLongLogo)]: {
+    next: (state, {payload}) => {
       return {
         ...state,
         sider: {
           ...state.sider,
-          ...action.data
+          ...payload
         }
       };
-    default:
-      return state;
+    },
+    throw: (state, action) => {}
   }
-};
+}, viewInitialState);
 
-export default viewReducer
+export default viewReducer;

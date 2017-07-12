@@ -21,7 +21,7 @@ class SBHeader extends Component {
   events = {
     onSiderToggle: () => {
       // 默认是展开状态 => false
-      const {collapsed, closeSiderAction, openSiderAction, changeToShortLogo, changeToLongLogo} = this.props;
+      const {collapsed, closeSider, openSider, changeToShortLogo, changeToLongLogo} = this.props;
 
       /**
        * 如果已经是折叠状态则这里让他展开并延迟 0.3秒 后更换 logo
@@ -29,7 +29,7 @@ class SBHeader extends Component {
        */
       if (collapsed) {
         // 展开侧边栏
-        openSiderAction();
+        openSider();
         setTimeout(() => {
           // 更换 logo
           changeToLongLogo();
@@ -37,7 +37,7 @@ class SBHeader extends Component {
         );
       } else {
         // 展开侧边栏
-        closeSiderAction();
+        closeSider();
         // 更换 logo
         changeToShortLogo();
       }

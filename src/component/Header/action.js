@@ -1,54 +1,39 @@
-import  CONSTANT from "../../constant"
+import CONSTANT from "../../constant";
+import {createActions} from "redux-actions";
 
-export const CLOSE_SIDER = Symbol(0);
-export const OPEN_SIDER = Symbol(1);
-export const CHANGE_TO_SHORT_LOGO = Symbol(2);
-export const CHANGE_TO_LONG_LOGO = Symbol(3);
 
 /**
- * 收起侧边栏
+ * 根据指定的 action.type 抽象出对应的高阶 actionCreator
+ * 
+ * 当调用指定的 action.type导出的高阶 actionCreator 时，返回的数据内容会自动带上指定的 action.type 
+ * 
+ * @example 
+ * actions.closeSider() => {
+ *  type:'CLOSE_SIDER',
+ *  payload:{collapsed: true},
+ * }
+ * 
  */
-export const closeSiderAction = ()=>{
-  return {
-    type:CLOSE_SIDER,
-    data:{
-      collapsed:true,
-    }
-  }
-}
+const actions = createActions({
+  /**
+   * 收起侧边栏
+   */
+  CLOSE_SIDER: () => ({collapsed: true}),
 
-/**
- * 展开侧边栏
- */
-export const openSiderAction = ()=>{
-  return {
-    type:OPEN_SIDER,
-    data:{
-      collapsed:false,
-    }
-  }
-}
+  /**
+   * 展开侧边栏
+   */
+  OPEN_SIDER: () => ({collapsed: false}),
 
-/**
- * 切换短 logo
- */
-export const changeToShortLogo = ()=>{
-  return {
-    type:CHANGE_TO_SHORT_LOGO,
-    data:{
-      logo:CONSTANT.PAGES.LOGO_TEXT.SHORT
-    }
-  }
-}
+  /**
+   * 切换短 logo
+   */
+  CHANGE_TO_SHORT_LOGO: () => ({logo: CONSTANT.PAGES.LOGO_TEXT.SHORT}),
 
-/**
- * 切换长 logo
- */
-export const changeToLongLogo = ()=>{
-  return {
-    type:CHANGE_TO_LONG_LOGO,
-    data:{
-      logo:CONSTANT.PAGES.LOGO_TEXT.LONG
-    }
-  }
-}
+  /**
+   * 切换长 logo
+   */
+  CHANGE_TO_LONG_LOGO: () => ({logo: CONSTANT.PAGES.LOGO_TEXT.LONG})
+});
+
+export default actions;
